@@ -1,0 +1,72 @@
+# generic
+*.tmp
+*.swp
+*.pyc
+*.pyo
+*.bak
+*.egg-info
+*.EGG-INFO
+.coverage
+.settings
+.classpath
+.idea
+.metadata
+target
+*.class
+*.iml
+*.jar
+*.log
+.DS_Store
+out/
+
+# eclipse
+.project
+.pydevproject
+
+# setuptools
+bin/
+build/
+dist/
+setup.py
+
+# buildout
+buildout.in.cfg
+.installed*.cfg
+.cache
+.cache/
+eggs
+eggs/
+develop-eggs/
+parts
+parts/
+build/
+dist/
+.achievements
+
+# scm
+.bzr/
+.svn/
+.hg/
+
+# msi-related
+parts/wix
+parts/product*
+parts/*.wixpdb
+parts/*.msi
+
+.codeintel
+*sublime*
+
+tmp*
+!tmp*py
+buildout.in
+
+bootstrap.py
+
+htmldocs/
+
+# tox
+.tox/
+
+dependency-reduced-pom.xml
+mainRunner
