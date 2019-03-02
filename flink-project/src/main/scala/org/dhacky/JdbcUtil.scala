@@ -1,11 +1,16 @@
 package org.dhacky
 
+/**
+  * MIT License
+  *
+  * Copyright (c) 2019 DHacky
+  */
+
 import java.sql.DriverManager
 
 import org.apache.flink.api.common.typeinfo.BasicTypeInfo
 import org.apache.flink.api.java.typeutils.RowTypeInfo
 import org.apache.flink.types.Row
-import org.apache.flink.api.scala._
 
 object JdbcUtil {
   val DRIVER_CLASS: String = "ru.yandex.clickhouse.ClickHouseDriver"
