@@ -13,6 +13,9 @@ ThisBuild / scalaVersion := "2.11.12"
 
 val flinkVersion = "1.7.2"
 
+// Maven/Ivy dependencies
+// groupId % artifactId % version
+// %% add scala version to artifactId
 val flinkDependencies = Seq(
   "org.apache.flink" %% "flink-scala" % flinkVersion % "provided",
   "org.apache.flink" %% "flink-streaming-scala" % flinkVersion % "provided",
