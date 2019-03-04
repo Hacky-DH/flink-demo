@@ -14,7 +14,7 @@ ThisBuild / scalaVersion := "2.11.12"
 val flinkVersion = "1.7.2"
 
 // Maven/Ivy dependencies
-// groupId % artifactId % version
+// groupId % artifactId % version [% configuration]
 // %% add scala version to artifactId
 val flinkDependencies = Seq(
   "org.apache.flink" %% "flink-scala" % flinkVersion % "provided",
@@ -26,8 +26,7 @@ val dependencies = Seq(
 
 lazy val root = (project in file(".")).
   settings(
-    libraryDependencies ++= flinkDependencies
-    libraryDependencies ++= dependencies
+    libraryDependencies ++= flinkDependencies ++ dependencies
   )
 
 assembly / mainClass := Some("org.dhacky.Job")
