@@ -73,7 +73,7 @@ object JdbcUtil {
 
   def getCreateQuery(tableName: String): String =
     s"""CREATE TABLE IF NOT EXISTS $DB_NAME.$tableName
-       |id UInt64,name String,email String,ratio Float32,date Date
+       |(id UInt64,name String,email String,ratio Float32,date Date)
        |ENGINE = MergeTree() PARTITION BY toYYYYMM(date)
        |ORDER BY (id, name, email) SETTINGS index_granularity = 8192"""
       .stripMargin.replaceAll("\n", " ")
