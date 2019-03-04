@@ -16,6 +16,8 @@ import org.apache.flink.types.Row
 object JdbcUtil {
   val DRIVER_CLASS: String = "ru.yandex.clickhouse.ClickHouseDriver"
   val DB_URL = "jdbc:clickhouse://localhost:8123/"
+  val DB_USER = "default"
+  val DB_PASSWORD = ""
   val DB_NAME = "flinkDB"
   val INPUT_TABLE = "inputTB"
   val OUTPUT_TABLE = "outputTB"
