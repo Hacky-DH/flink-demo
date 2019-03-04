@@ -19,7 +19,7 @@ val flinkVersion = "1.7.2"
 val flinkDependencies = Seq(
   "org.apache.flink" %% "flink-scala" % flinkVersion % "provided",
   "org.apache.flink" %% "flink-streaming-scala" % flinkVersion % "provided",
-  "org.apache.flink" %% "flink-jdbc" % flinkVersion % "provided")
+  "org.apache.flink" %% "flink-jdbc" % flinkVersion)
 
 val dependencies = Seq(
   "ru.yandex.clickhouse" % "clickhouse-jdbc" % "0.1.50")
