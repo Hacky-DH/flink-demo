@@ -21,9 +21,13 @@ val flinkDependencies = Seq(
   "org.apache.flink" %% "flink-streaming-scala" % flinkVersion % "provided",
   "org.apache.flink" %% "flink-jdbc" % flinkVersion % "provided")
 
+val dependencies = Seq(
+  "ru.yandex.clickhouse" % "clickhouse-jdbc" % "0.1.50")
+
 lazy val root = (project in file(".")).
   settings(
     libraryDependencies ++= flinkDependencies
+    libraryDependencies ++= dependencies
   )
 
 assembly / mainClass := Some("org.dhacky.Job")
