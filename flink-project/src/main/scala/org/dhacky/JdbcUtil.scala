@@ -89,7 +89,9 @@ object JdbcUtil {
       while ( {
         resultSet.next
       }) count += 1
-      assert(count == DATA.length)
+      if (count != DATA.length) {
+        Console.err.println(s"Table $OUTPUT_TABLE has $count rows, but data length is ${DATA.length}")
+      }
     } finally {
       if (dbConn != null) dbConn.close()
       if (statement != null) statement.close()
