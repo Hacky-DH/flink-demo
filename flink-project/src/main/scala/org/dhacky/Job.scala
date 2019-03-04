@@ -29,7 +29,6 @@ object Job {
     var cleanData = args.length > 0 && args(0).equalsIgnoreCase("clean")
     // set up the execution environment
     val env = ExecutionEnvironment.getExecutionEnvironment
-    JdbcUtil.cleanUpDatabase()
     JdbcUtil.prepareDatabase()
     val input = JDBCInputFormat.buildJDBCInputFormat.setDrivername(JdbcUtil.DRIVER_CLASS)
       .setDBUrl(JdbcUtil.DB_URL).setQuery(JdbcUtil.getSelectAll(JdbcUtil.INPUT_TABLE))
